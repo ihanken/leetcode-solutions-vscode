@@ -9,9 +9,16 @@ class Solution:
 
         grid[i][j] = '0'
 
+        # Move down
         if i < len(grid) - 1: self.fillIsland(grid, i + 1, j)
+        
+        # Move up
         if i > 0: self.fillIsland(grid, i - 1, j)
+        
+        # Move right
         if j < len(grid[i]) - 1: self.fillIsland(grid, i, j + 1)
+        
+        # Move left
         if j > 0: self.fillIsland(grid, i, j - 1)
         
 
